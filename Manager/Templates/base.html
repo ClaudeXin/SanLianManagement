@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{%static 'manager/main.css'%}"/>
+<link rel="stylesheet" type="text/css" href={% block style %}{% endblock %}/>
+<script src="{%static 'manager/js/Calendar.js'%}" type="text/javascript"></script>
+<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<div id="menu">
+		<div id="menu_head">
+        	<div id="logo">
+            	<img src="{%static 'manager/images/icons/logo1.gif'%}" />
+            </div>
+            <div id="menu_list">
+            	<ul id="select_item">
+                	<li class="item1"><a href="{%url 'index'%}">主页</a></li>
+                  	<li class="item1"><a href="{%url 'showconfmining'%}">爬虫</a></li>
+                   	<li class="item1"><a href="{%url 'showinformanager'%}">信息管理</a></li>                    
+                    <div style="clear:both"></div>
+                </ul>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div id="backgroup_music">
+        </div>
+    </div>
+    <div id="saying">
+    	<div id="saying_part">
+        	<h1>漫长的岁月，既毁坏了坟墓，又损坏了墓碑，可是光阴对于书却无能为力。</h1>
+        	<p>任何一本书的影响莫过于使读者开始作内心的反省。</h2>
+         <h2>WE LOVE BOOKS</h2>
+         <p>读书是易事，思索是难事，但两者缺一，便全无用处。</p>
+        </div>
+    </div>
+    {% block content %}{% endblock %}
+    <div id="root">
+    	<p>Neptune always strive for excellence , not perfection</p>
+    </div>
+    {% block js %}
+    {% endblock %}
+</body>
+</html>

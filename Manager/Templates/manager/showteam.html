@@ -1,0 +1,179 @@
+{% load staticfiles %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'manager/showteam.css' %}"/>
+<title>团队介绍</title>
+</head>
+<body>
+	<div id="menu">
+        	<div id="logo">
+            	<a href="{%url 'index'%}"><img src="{%static 'manager/images/icons/logo1.gif'%}" /></a>
+            </div>
+    </div>
+    <div id="saying">
+    	<div id="saying_part">
+        	<h1>漫长的岁月，既毁坏了坟墓，又损坏了墓碑，可是光阴对于书却无能为力。</h1>
+        	<p>任何一本书的影响莫过于使读者开始作内心的反省。</h2>
+         <h2>WE LOVE BOOKS</h2>
+         <p>读书是易事，思索是难事，但两者缺一，便全无用处。</p>
+        </div>
+    </div>
+    <div id="member">
+    	<div id="memberhead">
+    		<h1>OUR TEAM</h1>
+    		<p>WE ARE ALL NEPTUNER</p>
+    	</div>
+    	<div id="photo">
+    		<table>    	
+    		<tr>
+    			<td>
+    				<div class="matephoto">
+    					<img src="{%static 'manager/images/metephotos/xincheng.gif'%}" alt="" />
+    					<div class="brifeintro">
+    						<p>姓名：辛诚</p>
+    						<p>性别：男</p>
+    						<p>职务：项目经理</p>
+    					</div>
+    					<div style="clear:both"></div>
+    				</div>
+    			</td>
+    			<td>
+    				<div class="matephoto">
+    					<img src="{%static 'manager/images/metephotos/wuyang.gif'%}" alt="" />
+    					<div class="brifeintro">
+    						<p>姓名：吴洋洋</p>
+    						<p>性别：男</p>
+    						<p>职务：后台开发</p>
+    					</div>
+    					<div style="clear:both"></div>
+    				</div>
+    			</td>  		
+    		</tr>
+    		<tr>
+    			<td>
+    				<div class="matephoto">
+    					<img src="{%static 'manager/images/metephotos/yangzi.gif'%}" alt="" />
+    					<div class="brifeintro">
+    						<p>姓名：杨子</p>
+    						<p>性别：男</p>
+    						<p>职务：技术总监</p>
+    					</div>
+    					<div style="clear:both"></div>
+    				</div>
+    			</td>
+    			<td>
+    				<div class="matephoto">
+    					<img src="{%static 'manager/images/metephotos/qiuwen.gif'%}" alt="" />
+    					<div class="brifeintro">
+    						<p>姓名：邱雯</p>
+    						<p>性别：女</p>
+    						<p>职务：前台开发</p>
+    					</div>
+    					<div style="clear:both"></div>
+    				</div>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>
+    				<div class="matephoto">
+    					<img src="{%static 'manager/images/metephotos/menglu.gif'%}" alt="" />
+    					<div class="brifeintro">
+    						<p>姓名：孟璐</p>
+    						<p>性别：女</p>
+    						<p>职务：秘书</p>
+    					</div>
+    					<div style="clear:both"></div>
+    				</div>
+    			</td>
+    			<td>
+    				<div class="matephoto">
+    					<img src="{%static 'manager/images/metephotos/zhumengqing.gif'%}" alt="" />
+    					<div class="brifeintro">
+    						<p>姓名：朱孟钦</p>
+    						<p>性别：男</p>
+    						<p>职务：市场经理</p>
+    					</div>
+    					<div style="clear:both"></div>
+    				</div>
+    			</td>
+    		</tr>
+    		</table>
+    		</div>
+    </div>
+    <div id="introduce">    
+    			<section class="tabs">
+	            <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+		        <label for="tab-1" class="tab-label-1">culture</label>
+		
+	            <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+		        <label for="tab-2" class="tab-label-2">logo</label>
+		
+	            <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
+		        <label for="tab-3" class="tab-label-3">purpose</label>
+          
+			    <div class="clear-shadow"></div>
+		        <div class="content_tab">
+			        <div class="content-1">
+			        	<a class="tab_left">
+				        	<h2>01. 团队文化</h2>
+							<h3>a bit about our culture</h3>
+						</a>
+						<a  class="tab_right">
+							<p>我们是一个年轻的团队</p>
+							<p class="top hide">
+							我们有着同样的梦想。<br />
+							在我们的眼中，卓越并不仅仅是一个名词，他更是代表了一种心态————追求成功的心态。<br />						
+							我们并不追求完美，我们只追求卓越。<br />
+							</p>
+						</a>
+						<div class="clear"></div>
+					</div>
+			        <div class="content-2">
+			        	<a class="tab_left">
+				        	<h2>02. LOGO简述</h2>
+							<h3>a bit about our LOGO</h3>
+						</a>
+						<a  class="tab_right">
+							<p>我们的LOGO是一个抽象的海王星</p>
+							<p class="top hide">
+								海王星是环绕太阳运动的第八颗行星。<br />						
+								她是唯一利用数学预测而非有计划的观测发现的行星。
+								她的发现证明了人类拥有一个强大的，追求卓越的心。<br />
+								海王星激励着我们不断前行。<br />
+							</p>
+						</a>
+						<div class="clear"></div>
+					</div>
+			        <div class="content-3">
+			        	<a class="tab_left">
+				        	<h2>03. 我们的目标</h2>
+							<h3>a bit our purpose</h3>
+						</a>
+						<a  class="tab_right">
+							<p>我们决心做好每一件事</p>
+							<p class="top hide">
+								我们不会让看好我们的人失望，我们会尽我们最大的努力完善我们的系统。<br />
+								困难对我们来说更像是挑战，没有挑战的人生并不完美。
+								我们会做好这一次项目，我们不追求完美，只追求卓越。
+							</p>
+						</a>
+						<div class="clear"></div>
+                    </div>
+		        </div>
+		 </section>
+    </div>
+    <div id="sunset">
+    	<h1>卓越成就梦想</h1>
+    	<p>Copyright Neptune</p>
+    </div>
+    <div id="returnback">
+    	<div id="inner">
+    		<a href="{%url 'index'%}"><h2>回到主页</h2></a>
+    	</div>
+    </div>   
+     <div id="root">
+    	<p>Neptune always strive for excellence , not perfection</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* css document*/
+
+/*necessary*/
+#member{
+	background-color: #FF6347;
+	margin-top: 50px;
+	width: 90%;
+	margin: 0px auto;
+	text-align: center;
+	margin-top: 60px;
+	color:#BEBEBE;
+}
+
+#member h2{
+	font-size: 70px;
+}
+
+#member p{
+	padding-top: 100px;
+	font-size: 50px;
+}
+
+#root{
+	margin-top:70px;
+	text-align:center;
+	font-size:25px;
+	font-weight:400;
+}

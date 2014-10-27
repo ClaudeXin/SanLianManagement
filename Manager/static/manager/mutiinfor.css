@@ -1,0 +1,88 @@
+/* CSS Document */
+
+/*necessary*/
+
+#memberhead{
+	text-align:center;
+	color:#BEBEBE;
+	font-weight:900;
+	margin:100px auto;
+}
+
+#memberhead h1{
+	font-size:500%;
+}
+
+#memberhead p{
+	padding-top:30px;
+	font-size:300%;
+}
+
+#dispear{
+	background-color: #FF6347;
+	margin-top: 50px;
+	width: 100%;
+	margin: 0px auto;
+	text-align: center;
+	margin-top: 60px;
+	color:#BEBEBE;
+}
+
+
+#dispear h2{
+	font-size: 70px;
+}
+
+#dispear p{
+	padding-top: 100px;
+	font-size: 50px;
+}
+
+#book_info{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 80px;
+	background-color: #F8B156;	
+	//height:350px;
+}
+
+#book_tab{
+	width: 100%;
+}
+#book_tab table{
+	width: 100%;
+}
+
+.infor_name{
+	text-align: center;
+	font-size: 30px;
+	background-color: #3333cc;
+}
+
+.infor_value{
+	width: 80%;
+	text-align: center;
+	font-size: 30px;
+}
+
+#brif_intro{
+	width:100%;
+}
+
+#brif_intro h2{
+	font-size: 30px;
+	background-color:#FF6347; 
+}
+
+#brif_intro p{
+	overflow:scroll;
+	font-size: 20px;
+	height: 100px;
+}
+
+#root{
+	margin-top:70px;
+	text-align:center;
+	font-size:25px;
+	font-weight:400;
+}

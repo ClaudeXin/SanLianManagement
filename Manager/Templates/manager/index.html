@@ -1,0 +1,119 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{%static 'manager/main.css'%}"/>
+<link rel="stylesheet" type="text/css" href="{%static 'manager/index.css'%}"/>
+<script language="javascript" src="{%static 'manager/js/date.js'%}"></script>
+<title>主页</title>
+</head>
+<body>
+    <div id="menu">
+        <div id="menu_head">
+            <div id="logo">
+                <img src="{%static 'manager/images/icons/logo1.gif'%}" />
+            </div>
+            <div id="menu_list">
+                <ul id="select_item">
+                    <li class="item1"><a href="{%url 'index'%}">主页</a></li>
+                    <li class="item1"><a href="{%url 'showconfmining'%}">爬虫</a></li>
+                    <li class="item1"><a href="{%url 'showinformanager'%}">信息管理</a></li>                    
+                    <div style="clear:both"></div>
+                </ul>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div id="backgroup_music">
+        </div>
+    </div>
+    <div id="saying">
+        <div id="saying_part">
+            <h1>漫长的岁月，既毁坏了坟墓，又损坏了墓碑，可是光阴对于书却无能为力。</h1>
+            <p>任何一本书的影响莫过于使读者开始作内心的反省。</h2>
+         <h2>WE LOVE BOOKS</h2>
+         <p>读书是易事，思索是难事，但两者缺一，便全无用处。</p>
+        </div>
+    </div>
+    <div id="member">
+    <form action="/manager/index/" method="get">
+    	<div id="sale">
+            <p>销售记录</p>
+            <div id="configure_sales">
+                <select class="select_cust" name="salesid">
+                    {%for element in salesoption%}
+                    <option value="{{element.sell_id}}">{{element.sell_name}}</option>                 
+                    {%endfor%}
+                </select>
+                <input class="saledate" type="text" id="salesdate1" name="salesdate1" value=""  size=12/>
+                <input class="salebtn" type="button" name="submit3" value="select" onclick="ShowCalendar('salesdate1')"/> 
+                <input class="saledate" type="text" id="salesdate2" name="salesdate2" value=""  size=12/>
+                <input class="salebtn" type="button" name="submit3" value="select" onclick="ShowCalendar('salesdate2')"/> 
+                <input type="submit" value="查询" style="bolder:0px;background-color:#FF6347;width:15%;font-family:'chinese_font';font-size:20px;">
+            </div>
+            <table style="width:100%">
+                <tr>                    
+                    <td class="web_sell_id">操作员姓名</td>   
+                    <td class="web_cust">顾客昵称</td>     
+                    <td class="web_sell_price">书价</td>
+                    <td class="web_time">销售时间</td>   
+                    <td class="web_book_id">图书编号</td>   
+                </tr>
+            </table>
+            <div id ="record_show" style="overflow:auto; height:90%;background-color:#F8B156;">            
+            <table>
+                {%for element in record%}
+                <tr>                    
+                    <td class="web_sell_id">{{element.web_sell_id}}</td>   
+                    <td class="web_cust">{{element.web_cust}}</td>     
+                    <td class="web_sell_price">{{element.web_sell_price}}</td>
+                    <td class="web_time">{{element.web_time}}</td>   
+                    <td class="web_book_id">{{element.web_book_id}}</td>   
+                </tr>
+                {%endfor%}
+            </table>
+            </div>
+        </div>
+        <div id="gank">
+            <p>图书排行</p>
+            <div id="configure_book">            
+                <select class="select_frame" name="booknum">
+                    <option value="20">20本</option>  
+                    <option value="10">10本</option>
+                    <option value="5">5本</option>
+                </select>
+                <select class="select_frame" name="state">
+                    <option value="decrement">从高到低</option>  
+                    <option value="increment">从低到高</option>
+                </select>
+                <input type="submit" value="查询" style="bolder:0px;background-color:#FF6347;width:15%;font-family:'chinese_font';font-size:20px;">          
+            </div>
+            <table style="width:100%">
+                <tr>                    
+                    <td class="book_isbn">图书编号</td>   
+                    <td class="book_name">书名</td>     
+                    <td class="book_remain">余量</td>
+                    <td class="book_hot_point">热度</td>   
+                </tr>
+            </table>
+            <div id ="book_show" style="overflow:auto; height:90%;background-color:#F8B156;">            
+            <table>
+                {%for element in book%}
+                <tr>                    
+                    <td class="book_isbn">{{element.book_isbn}}</td>   
+                    <td class="book_name">{{element.book_name}}</td>     
+                    <td class="book_remain">{{element.book_remain}}</td>
+                    <td class="book_hot_point">{{element.book_hot_point}}</td>   
+                </tr>
+                {%endfor%}
+            </table>
+            </div>
+        </div>
+        </form>
+        <div style="clear:both"></div>
+    </div>
+     <div id="root">
+        <p>Neptune always strive for excellence , not perfection</p>
+    </div>
+</body>
+</html>

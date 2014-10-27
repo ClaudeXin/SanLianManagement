@@ -1,0 +1,31 @@
+{%load staticfiles%}
+<html>
+<head>
+	<title>管理员登陆界面</title>
+		<meta charset="utf-8">
+		<link href="{%static 'manager/login.css'%}" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+<body>
+         {%if Message%}
+		<p style="text-align:center;background-color:#ff6347;">用户名或密码错误</p>
+         {%endif%}
+	 <div class="main">
+		<div class="login-form">
+			<h1>三联书店图书管理系统</h1>
+					<div class="head">
+						<img src="{%static 'manager/images/icons/user.png'%}" alt=""/>
+					</div>
+                    <form action="/manager/login/" method="post">
+                        {% csrf_token %}
+						<input type="text" class="text" name="username" style="width:99%">
+						<input type="password" name="password" style="width:99%">
+						<div class="submit">
+						<input type="submit" onclick="myFunction()" value="LOGIN" >
+                        </div>	
+                    </form>      
+		</div>
+	</div> 		
+</body>
+</html>

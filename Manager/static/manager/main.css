@@ -1,0 +1,95 @@
+/* CSS Document */
+/*reset*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0;padding:0;}
+/*end reset*/
+
+
+@font-face{
+	font-family:chinese_font;
+	font-style:normal;
+	src:url(fonts/zaofang.otf);
+}
+
+
+body{
+	font-family:"chinese_font";
+	border:1px solid #CCC;
+}
+
+#menu{
+	width:90%;
+	margin:0 auto;		
+	margin-top:%5;
+}
+
+#logo{
+	float:left;
+}
+
+#menu_list{
+	height:12%;
+	float:left;
+	font-size:50px;
+	width:60%;
+}
+
+#select_item{
+	height:12%;
+	margin-top:2%;
+	margin-left:25%;
+}
+
+.item1{
+	float:left;
+	padding:20px;
+}
+
+.item1 a:hover{
+	color:#F63;
+}
+
+.item1 a{
+	color:#000;
+	text-decoration:none;
+}
+
+#saying{
+	background-image:url(images/background/background_book3.jpg);
+	background-size:100% 100%;
+	margin-top:20px;
+	height:500px;
+}
+
+#saying_part{
+	width:800px;
+	color:white;
+	height:550px;
+	margin:0 auto;
+}
+
+#saying_part h1{
+	padding-top:50px;
+	font-size:50px;
+	text-align:center;
+}
+
+#saying_part h2{
+	font-size:40px;
+	margin-top:50px;
+	text-align:center;
+}
+
+#saying_part p{
+	font-size:30px;
+	text-align:center;
+	margin-top:50px;
+}
+
+#root{
+	margin-top:70px;
+	text-align:center;
+	font-size:25px;
+	font-weight:400;
+}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{%load staticfiles%}
+{% block title %}添加{% endblock %}
+{% block style %}"{%static 'manager/addseller.css'%}"{% endblock %}
+{% block content %}
+    <div id="member">
+        {%if message%}
+            <center style="font-size:30px;color:#3333cc;">{{message}}</center>
+        {%endif%}
+        <center style="font-size:40px; background-color:#FF6347">添加账号</center>
+        <form action="/manager/seller/handleadd/" method="post">
+        {%csrf_token%}
+        <table>
+            <tr>
+                <td class="name">四位编号</td>
+                <td class="value"><input type="text" name="sellid"></td>
+            </tr>
+             <tr>
+                <td class="name">姓名</td>
+                <td class="value"><input type="text" name="sellname"></td>
+            </tr>
+             <tr>
+                <td class="name">账号</td>
+                <td class="value"><input type="text" name="sellaccount"></td>
+            </tr>
+             <tr>
+                <td class="name">密码</td>
+                <td class="value"><input type="password" name="sellpassword"></td>
+            </tr>
+             <tr>
+                <td class="name">手机</td>
+                <td class="value"><input type="text" name="sellphone"></td>
+            </tr>
+             <tr>
+                <td class="name">微信</td>
+                <td class="value"><input type="text" name="sellwechat"></td>
+            </tr>
+        </table>
+        <input type="submit" value="添加" id="subbtn">
+        <div style="clear:both"></div>
+        <form>
+    </div>
+    
+{% endblock %}

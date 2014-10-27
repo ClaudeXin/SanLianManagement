@@ -1,0 +1,122 @@
+#body{
+        background-color:#FFFF99;
+}
+
+#member{
+    margin:20px auto;
+    width:100%;
+    height:600px;
+}
+
+#sale,#gank{
+    float:left;
+}
+
+#sale{
+    width:50%;
+    height:600px;
+    border-right:1px solid #BEBEBE;
+    margin-top:20px;
+}
+    
+#gank{
+    width:49.5%;
+    height:600px;
+    border-left:1px solid #BEBEBE;
+    margin-top:20px;
+}
+
+#sale p,#gank p{
+    font-size:40px;
+    text-align:center;
+    height:40px;
+    background-color:#3333CC;
+}
+.select_frame{
+    font-family:"chinese_font";
+    width:40%;
+    font-size:20px;
+}
+.select_frame option{
+    font-family:"chinese_font";
+    font-size:20px;
+}
+
+.book_name{
+    width:40%;
+    text-align:center;
+    font-size:20px;
+}
+
+.book_isbn{
+    width:20%;
+    text-align:center;
+    font-size:20px;
+}
+
+.book_hot_point{
+    width:10%;
+    text-align:center;
+    font-size:20px;
+}
+
+.book_remain{
+    width:10%;
+    text-align:center;
+    font-size:20px;
+}
+
+#book_show table tr:hover{
+    background-color:#FF6347;
+}
+
+#record_show table tr:hover{
+    background-color:#FF6347;
+}
+
+.web_sell_id{
+    font-size:20px;
+    width:12%;
+    text-align:center;
+}
+.web_cust{
+    font-size:20px;
+    width:12%;
+    text-align:center;
+}
+
+.web_sell_price{
+    font-size:20px;
+    width:5%;
+    text-align:center;
+}
+.web_time{
+    font-size:20px;
+    width:35%;
+    text-align:center;
+}
+
+.web_book_id{
+    font-size:20px;
+    width:15%;
+    text-align:center;
+}
+  
+.saledate{
+    width:20%;
+}
+.salebtn{
+    width:10%;
+    font-family: "chinese_font";
+    border:0px;
+    font-size:20px;
+}
+.select_cust{
+    font-family:"chinese_font";
+    width:20%;
+    font-size:20px;
+}
+.select_cust option{
+    font-family:"chinese_font";
+    font-size:20px;
+}

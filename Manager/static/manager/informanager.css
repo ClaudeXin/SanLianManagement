@@ -1,0 +1,152 @@
+#bookline1{
+	width:80%;
+	margin: 0px auto;
+	margin-top: 60px;
+}
+
+#search{
+	width: 80%;
+	margin: 0px auto;
+	margin-top: 40px;
+}
+
+#searchbook{
+	height: 40px;
+	line-height: 40px;
+	width: 80%;
+}
+
+#searchbtn{
+	width: 15%;
+	height: 45px;
+	border: 0px;
+	font-family:"chinese_font";
+	font-size:40px;
+	background-color: transparent;
+}
+
+#bookline1 table{
+	margin: 0px auto;
+	width: 100%;
+}
+
+.bookcount_size{
+	width:30%;
+	text-align: center;
+	font-size: 40px;
+	background-color: #3333cc;
+}
+
+#bookcount_btn{
+	font-family: "chinese_font";
+	font-size: 40px;
+	background-color: #ff6347;
+	border: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+#book_detail{
+	margin-top: 20px;
+}
+
+.book_cata{
+	font-size: 40px;
+	text-align: center;
+	width:30%;
+	background-color: #F8B156;
+}
+
+.book_size{
+	font-size: 40px;
+	text-align: center;
+	background-color: #F8B156;
+}
+
+#book_cata1{
+	font-size: 40px;
+	text-align: center;
+	width:30%;
+	background-color: #3333CC;
+	border-bottom: 1px solid #BEBEBE;
+}
+
+#book_size1{
+	font-size: 40px;
+	text-align: center;
+	background-color: #3333CC;
+	border-bottom: 1px solid #BEBEBE;
+}
+
+#ourteam{
+	margin-top: 60px;
+}
+
+#ourteam h1{
+	font-size: 50px;
+	text-align: center;
+}
+
+#ourteam a{
+	text-decoration: none;
+}
+
+#ourteam a:hover{
+	color: #FF6347;
+}
+
+#sellermanager{
+	width: 80%;
+	margin: 0px auto;
+	margin-top:60px;
+}
+
+#sellermanager table tr td{
+	width: 2%;
+	font-size: 25px;
+	text-align: center;
+}
+
+.sellerbtn{
+	width: 49%;
+	border: 0px;
+	background-color: #3333cc;
+	font-size: 20px;
+	font-family: "chinese_font";
+}
+#addseller{
+	width:100%;
+	height:50px;
+	background-color:#F8B156;
+}
+
+#inner{
+	margin: 0 auto;
+	height:100%;
+	background-color:#FF6347;
+	width:30%; 
+	text-align: center;	
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+#inner:hover{
+	margin: 0 auto;
+	height:100%;
+	background-color:#FF6347;
+	width:100%;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+#inner .commit{
+	font-size: 38px;
+    background:#FF6347;
+    opacity:0.6;
+    font-family:chinese_font;
+    border:0px;
+}

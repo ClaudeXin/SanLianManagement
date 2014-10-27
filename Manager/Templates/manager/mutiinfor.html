@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{%load staticfiles%}
+{% block title %}图书信息{% endblock %}
+{% block style %}"{%static 'manager/mutiinfor.css'%}"{% endblock %}
+{% block content %}
+    <div id="memberhead">
+    	<h1>BOOK INFORMATION</h1>
+    	<p>WE WILL SHOW THIS FOLLOW</p>
+        <center style="font-size:25px;">第{{page}}页</center>
+    </div>
+    <div id="introduce">
+    {% if books %}
+    	{% for book_item in books %}
+    		<div id="book_info">
+    			<div id="book_tab">
+    				<table>
+    					<tr>	
+    						<td class="infor_name">书名</td>
+    						<td class="infor_value">{{book_item.book_name}}</td>
+    					</tr>
+    					<tr>
+    						<td class="infor_name">作者</td>
+    						<td class="infor_value">{{book_item.book_auth_name}}</td>
+    					</tr>
+    					<tr>
+    						<td class="infor_name">ISBN编号</td>
+    						<td class="infor_value">{{book_item.book_isbn}}</td>
+    					</tr>
+    					<tr>
+    						<td class="infor_name">出版时</td>
+    						<td class="infor_value">{{book_item.book_publish_time}}</td>
+    					</tr>
+    					<tr>
+    						<td class="infor_name">字数</td>
+    						<td class="infor_value">{{book_item.book_word}}</td>
+    					</tr>
+    					<tr>
+    						<td class="infor_name">出版商</td>
+    						<td class="infor_value">{{book_item.book_publisher}}</td>
+    					</tr>    					
+    				</table>
+    				<div id="brif_intro">    			
+    						<h2>简介</h2>
+    						<p>{{book_item.book_introduce}}</p>
+    				</div>
+    			</div>
+    		</div>
+    	{% endfor %}
+    	{% else %}
+    		<div id="dispear">
+    			<h2>NOT FOUND!</h2>
+				<p>未找到您需要的书</p>	
+    		</div>
+    	{% endif %}
+    </div>
+    <div id="page">
+        <a href="/manager/search/?searchargs={{arg}}&page={{begin}}">上一页</a>
+        <a href="/manager/search/?searchargs={{arg}}&page={{end}}">下一页</a>
+    </div>
+ {% endblock %}

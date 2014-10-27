@@ -1,0 +1,125 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{%static 'manager/main.css'%}"/>
+<link rel="stylesheet" type="text/css" href="{%static 'manager/informanager.css'%}"/>
+<script type="text/javascript">
+    function display(clickid){
+        if(document.getElementById(clickid).style.display == 'none'){
+            document.getElementById(clickid).style.display = 'block'
+        }else{
+            document.getElementById(clickid).style.display = 'none'
+        }
+    }
+</script>
+<title>信息管理</title>
+</head>
+<body>
+    <div id="menu">
+        <div id="menu_head">
+            <div id="logo">
+                <img src="{%static 'manager/images/icons/logo1.gif'%}" />
+            </div>
+            <div id="menu_list">
+                <ul id="select_item">
+                    <li class="item1"><a href="{%url 'index'%}">主页</a></li>
+                    <li class="item1"><a href="{%url 'showconfmining'%}">爬虫</a></li>
+                    <li class="item1"><a href="{%url 'showinformanager'%}">信息管理</a></li>                    
+                    <div style="clear:both"></div>
+                </ul>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div id="backgroup_music">
+        </div>
+    </div>
+    <div id="saying">
+        <div id="saying_part">
+            <h1>漫长的岁月，既毁坏了坟墓，又损坏了墓碑，可是光阴对于书却无能为力。</h1>
+            <p>任何一本书的影响莫过于使读者开始作内心的反省。</h2>
+         <h2>WE LOVE BOOKS</h2>
+         <p>读书是易事，思索是难事，但两者缺一，便全无用处。</p>
+        </div>
+    </div>
+    <div id="member">
+        <div id="bookmanager">
+            <div id="bookcount">
+            <div id="bookline1"> 
+                <table>
+                    <tr>
+                        <td class="bookcount_size">图书个数:</td>
+                        <td class="bookcount_size">{{booknum}}（本）</td>
+                        <td class="bookcount_size">
+                              <input id="bookcount_btn" type="button" value="点我" onclick="display('book_detail')">
+                        </td>
+                    </tr>
+                </table>   
+                 <div id="book_detail" style="display:none;">
+                    <table>
+                        <tr style="background-color:#3333CC">
+                            <td id="book_cata1">分类</td>
+                            <td id="book_size1">个数</td>
+                        </tr>
+                        {%for element in bookcate%}
+                        <tr>
+                            <td class="book_cata">{{element.name}}</td>
+                            <td class="book_size">{{element.value}}（本）</td>
+                        </tr>
+                        {%endfor%}
+                    </table>
+                </div>                                       
+            </div>                           
+            </div>
+            <div id="search">
+                <form action="/manager/search/" method="get">
+                    <input id="searchbook"type="text" name="searchargs">
+                    <input id="searchbtn"type="submit" value="图书搜索" >
+                </form>
+            </div>
+        </div>
+        <div id="sellermanager">       
+            <form action="/manager/seller/change/" method="get">
+                 <table>
+                    <tr>
+                        <td>编号</td>
+                        <td>姓名</td>
+                        <td>微信</td>
+                        <td>手机</td>
+                        <td>操作</td>
+                    </tr>
+              
+                    {%if seller%}
+                    {%for element in seller%}
+                    <tr>
+                        <td>{{element.sell_id}}</td>
+                        <td>{{element.sell_name}}</td>
+                        <td><input class="sellertext" type="text" name="wechat" value="{{element.sell_wechat}}"></td>
+                        <td><input class="sellertext" type="text" name="phone" value="{{element.sell_phone}}"></td>
+                        <input type="hidden" name="sellid"value="{{element.sell_id}}"> 
+                        <td><input class="sellerbtn" name="delete" type="submit" value="删除"><input class="sellerbtn" name="change" type="submit" value="更改"></td>
+                    </tr>
+                    {%endfor%}
+                    {%else%}
+                    <td >暂时没有员工</td>
+                    {%endif%}
+                      </table>
+            </form>
+             <form action="/manager/seller/add/" method="get">     
+        <div id="addseller">
+            <div id="inner">
+                <input class="commit" value="增加员工" type="submit">
+            </div>
+        </div>   
+    </form>
+        </div>        
+        <div id="ourteam">
+            <h1><a href="{%url 'showteam'%}">CONNECT OUR TEAM</a></h1>
+        </div>
+    </div>
+    <div id="root">
+        <p>Neptune always strive for excellence , not perfection</p>
+    </div>
+</body>
+</html>

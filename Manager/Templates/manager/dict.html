@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{%block style%}"{%static 'manager/dict.css'%}"{%endblock%}
+{% block title %}获取信息{% endblock %}
+{% block content %}
+    <div id="member">
+    	<div id="memberhead">
+    		<h1>OUR WORK</h1>
+    		<p>WE CAN RUN THIS FOLLOW</p>
+    	</div>
+    </div>
+    <form action="/manager/mining/" method="get">     
+        <div id="configure" >
+        <p>配置图书信息获取</p>
+        <select class="input_frame"name="indexnum">
+            <option value="50">更新最近图书</option>
+            <option value="100">更新所有图书</option>
+        </select>
+        <select class="input_frame"name="threadnum">
+            <option value="3">低速</option>
+            <option value="7">中等</option>
+            <option value="10">高速</option>
+            <option value="10">急速</option>
+        </select>
+        </div>
+        <div id="dictrun">
+            <div id="inner">
+                <input class="commit" value="START" type="submit">
+            </div>
+        </div>   
+    </form>
+    <div id="sy">
+    	<h2>这项操作会花费很多时间，可以先喝杯咖啡</h2>
+    </div> 
+    <div id="show">
+    	<h1>卓越成就梦想</h1>
+    	<p>Copyright Neptune</p>
+    </div>
+ {% endblock %}

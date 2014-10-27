@@ -1,0 +1,10 @@
+{%extends "base.html"%}
+{%load staticfiles%}
+{% block title %}工作中{% endblock %}
+{% block style %}"{%static 'manager/loadok.css'%}"{% endblock %}
+{% block content %}
+	<div id="member">
+		<h2>MANAGER SUCCESS!</h2>
+		<p>{{message}}</p>
+	</div>
+{% endblock %}

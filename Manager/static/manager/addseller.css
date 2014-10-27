@@ -1,0 +1,42 @@
+/* CSS Document */
+/*necessary*/
+
+#member{
+	width: 80%;
+	margin: 0px auto;
+	margin-top: 50px;	
+	background-color: #F8B156;
+}
+#member table{
+	margin: 0px auto;
+	width: 100%;
+}
+#member table td{
+	text-align: center;
+}
+.name{
+	width: 40%;
+	font-size: 40px;
+	text-align: center;
+	background-color: #3333cc;
+}
+
+.value input{
+	width: 95%;
+	height: 60px;
+	line-height: 60px;
+	font-size: 60px;
+	border: 0px;
+}
+
+#subbtn{
+	font-size: 30px;
+	font-family: "chinese_font";
+	background-color: transparent;
+	border: 0px;
+	float: right;
+	padding-right: 20px;
+}
+#subbtn:hover{
+	background-color: #FF6347;
+}

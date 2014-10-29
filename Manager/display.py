@@ -12,8 +12,7 @@ def showTeam(request):
         manager_id = request.session["manager_id"]
         man = Man.objects.get(man_id=manager_id)
     except:
-        return render(request, 'manager/login.html')
-        
+        return render(request, 'manager/login.html')       
     return render(request, 'manager/showteam.html')
 
 def index(request):

@@ -4,13 +4,13 @@ from search import SearchWebRecord, SearchBookByHot
 from search import SearchBook
 import re
 
-class filterResult():
+class FilterResult():
     def filterWork(self):
         pass
     def getValue(self):
         pass
 
-class ShowIndexWebRecord(filterResult):
+class ShowIndexWebRecord(FilterResult):
     def __init__(self, time1, time2, salesman):     
         self.target = SearchWebRecord(time1, time2, salesman).getValue()   
         self.result = []
@@ -35,7 +35,7 @@ class ShowIndexWebRecord(filterResult):
     def getValue(self):
         return self.result
         
-class ShowBookCase(filterResult):
+class ShowBookCase(FilterResult):
     def __init__(self, num, state):
         self.target = SearchBookByHot(num, state).getValue()
         self.result = []
@@ -59,7 +59,7 @@ class ShowBookCase(filterResult):
     def getValue(self):
         return self.result
 
-class showBookDetail(filterResult):
+class showBookDetail(FilterResult):
     def __init__(self, arg):
         self.target = SearchBook(arg).getValue()
         self.result = []

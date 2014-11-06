@@ -45,19 +45,19 @@ def login(request):
     password = request.POST.get("password", "None")    
     message = None
     if username == "None" and password == "None":
-        return render(request, "manager/login.html", {"Message": message})
+        return render(request, "manager/login.html", {"message": message})
     else:
         try:
             obj = Man.objects.get(man_account = username)
         except:
             message = "账户名错误"
-            return render(request, "manager/login.html", {"Message": message})
+            return render(request, "manager/login.html", {"message": message})
         if obj.man_password == password:
             request.session["manager_id"] = int(obj.man_id)
             return index(request)
         else:            
             message = "密码错误"
-            return render(request, "manager/login.html", {"Message": message})
+            return render(request, "manager/login.html", {"message": message})
 
 
 def showConfMining(request):

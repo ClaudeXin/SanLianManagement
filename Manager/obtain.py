@@ -70,6 +70,6 @@ def groupTask(index):
 
 def webming(request, index, threadnum, page_path):
     #start thread to dict information
-    #manage = WorkManager(index, threadnum)
+    manage = WorkManager(index, threadnum)
     #manage.wait_allcomplete()
     return render(request, page_path, {"message": "成功运行，现在可以离开这个页面"})

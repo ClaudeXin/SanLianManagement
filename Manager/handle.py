@@ -24,23 +24,21 @@ def search(request):
         		manager_id = request.session["manager_id"]
         		man = Man.objects.get(man_id=manager_id)
 	except:
-        		return render(request, 'manager/login.html')	
-
-	page = request.REQUEST.get("page", "1")
+        		return render(request, 'manager/login.html')	        		
 	arg = request.REQUEST.get("searchargs") 
+	page = request.REQUEST.get("page", "1")
+	bookset = showBookDetail(arg).getValue()
 	page = int(page)
-	begin = page - 1
-	end = page + 1
-	book_set = showBookDetail(arg).getValue()
-	length = len(book_set) / 5
-	if page == length + 1:
-		end = len(book_set)
-	if page < 0:
-		begin = 0
-		end = 2
+	if page == 0:
 		page = 1
-	book = book_set[begin*5: end*5]
-	return render(request, "manager/mutiinfor.html", {"books": book, "begin":begin, "end": end, "page": page,"len": length, "arg":arg})
+	begin = (page - 1) * 5
+	tmpend = (begin + 1) * 5
+	if tmpend >= len(bookset):
+		end = len(bookset) - 1
+	else:
+		end = tmpend		
+	book = bookset[begin: end]
+	return render(request, "manager/mutiinfor.html", {"books": book, "page":page, "arg": arg, "begin": page - 1, "end": page + 1})
 
 def changeSeller(request):
 	try:
@@ -48,16 +46,16 @@ def changeSeller(request):
         		man = Man.objects.get(man_id=manager_id)
 	except:
         		return render(request, 'manager/login.html')
-	del_option = request.REQUEST.get("delete", "none")
-	cha_option = request.REQUEST.get("change", "none")
-	sellerid = request.REQUEST.get("sellid")
+	del_option = request.POST.get("delete", "none")
+	cha_option = request.POST.get("change", "none")
+	sellerid = request.POST.get("sellid")
 
 	seller = Seller.objects.get(sell_id=sellerid)
 
 	if del_option == 'none' and cha_option != 'cha_option':
 
-		phone = request.REQUEST.get("phone", "none")
-		wechat = request.REQUEST.get("wechat", "none")
+		phone = request.POST.get("phone", "none")
+		wechat = request.POST.get("wechat", "none")
 		if len(phone) != 11:
 			return render(request, "manager/loadok.html", {"message": "错误的手机号"})
 		seller.sell_phone = phone

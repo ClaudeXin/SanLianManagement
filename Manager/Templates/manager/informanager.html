@@ -80,7 +80,7 @@
             </div>
         </div>
         <div id="sellermanager">       
-            <form action="/manager/seller/change/" method="get">
+            
                  <table>
                     <tr>
                         <td>编号</td>
@@ -95,17 +95,20 @@
                     <tr>
                         <td>{{element.sell_id}}</td>
                         <td>{{element.sell_name}}</td>
+                        <form action="/manager/seller/change/" method="post">
+                        {%csrf_token%}
                         <td><input class="sellertext" type="text" name="wechat" value="{{element.sell_wechat}}"></td>
                         <td><input class="sellertext" type="text" name="phone" value="{{element.sell_phone}}"></td>
                         <input type="hidden" name="sellid"value="{{element.sell_id}}"> 
                         <td><input class="sellerbtn" name="delete" type="submit" value="删除"><input class="sellerbtn" name="change" type="submit" value="更改"></td>
+                        </form>
                     </tr>
                     {%endfor%}
                     {%else%}
                     <center style="font-size:20px;background-color:#FF6347;">没有购买记录</center>
                     {%endif%}
                       </table>
-            </form>
+            
              <form action="/manager/seller/add/" method="get">     
         <div id="addseller">
             <div id="inner">

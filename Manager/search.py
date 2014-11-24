@@ -66,7 +66,7 @@ class SearchWebRecord(Search):
         self.__searchSalesman()
         
     def __searchTime(self):
-        if self.time1 == "all" or self.time1 == "" or self.time2 == "":
+        if self.time1 == "all" or self.time1 == "" or self.time2 == "" or self.time2 == "all":
             pass
         else:
             date1 = datetime.datetime.strptime(self.time1, "%Y-%m-%d") 

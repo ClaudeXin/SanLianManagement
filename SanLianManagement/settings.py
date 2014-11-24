@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'Manager',
     'Customer',
-    'Salesman',
+    'Salesman',    
 )
 
 MIDDLEWARE_CLASSES = (
